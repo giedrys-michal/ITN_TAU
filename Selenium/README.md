@@ -1,4 +1,4 @@
-#SERWIS 1
+#SERWIS 1 - IKEA - ikea.py
 
 Scenariusz testowy 1
 
