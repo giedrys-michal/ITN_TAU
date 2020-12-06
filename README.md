@@ -25,3 +25,6 @@ test bundle - umieścić testy w jednym pliku, grupując względem wybranej cech
 zaimplementować logowanie komunikatów o różnych poziomach i zapisać to do pliku logu
 
 drivery dla konkretnych przeglądarek załączyć do repo (utworzyć domyślny katalog dla plików drivera)
+
+# Zjazd 3
+Maven repository - https://mvnrepository.com/  
