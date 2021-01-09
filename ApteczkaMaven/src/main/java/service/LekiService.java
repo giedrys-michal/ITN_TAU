@@ -3,10 +3,16 @@ package service;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.joda.money.Money;
+
 import domain.Lek;
 
 public class LekiService {
 	public List<Lek> leki = new ArrayList<Lek>();	
+	
+	public LekiService() {
+		
+	}
 	
 	public void addLek(Lek lek) {
 		this.leki.add(lek);
@@ -24,10 +30,10 @@ public class LekiService {
 		this.leki.clear();
 	}
 	
-	public double cenaSum() {
-		double suma = 0.0;
+	public Money cenaSum() {
+		Money suma = Money.parse("PLN 0.00");
 		for (Lek lek : leki) {
-			suma += lek.getCena();
+			suma = suma.plus(lek.getCena());
 		}
 		return suma;
 	}

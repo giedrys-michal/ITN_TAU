@@ -1,21 +1,28 @@
 package domain;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+import org.joda.money.*;
+
 public class Lek {
-	public Lek(int id, int id_apteczka, String nazwa, String typ, int ilosc, double cena) {
-		this.id = id;
-		this.id_apteczka = id_apteczka;
-		this.nazwa = nazwa;
-		this.typ = typ;
-		this.ilosc = ilosc;
-		this.cena = cena;
-	}
 	
 	public int id;
 	public int id_apteczka;
 	public String nazwa;
 	public String typ;
 	public int ilosc;
-	public double cena;
+	public final CurrencyUnit DEF_CURRENCY = CurrencyUnit.of("PLN");
+	public Money cena;
+	
+	public Lek(int id, int id_apteczka, String nazwa, String typ, int ilosc, double cena) {
+		this.id = id;
+		this.id_apteczka = id_apteczka;
+		this.nazwa = nazwa;
+		this.typ = typ;
+		this.ilosc = ilosc;
+		this.cena = Money.of(DEF_CURRENCY, cena);
+	}
 	
 	public int getId() {
 		return id;
@@ -47,11 +54,17 @@ public class Lek {
 	public void setIlosc(int ilosc) {
 		this.ilosc = ilosc;
 	}
-	public double getCena() {
+	public Money getCena() {
 		return cena;
 	}
 	public void setCena(double cena) {
-		this.cena = cena;
+		this.cena = Money.of(DEF_CURRENCY, cena);
+	}
+	
+	public Money convertCenaToCurrency(String currencyISOcode, BigDecimal conversionRate) {
+		CurrencyUnit currency = CurrencyUnit.of(currencyISOcode.toUpperCase());
+		Money convertedAmount = this.cena.convertedTo(currency, conversionRate, RoundingMode.HALF_UP);
+		return convertedAmount;
 	}
 
 }

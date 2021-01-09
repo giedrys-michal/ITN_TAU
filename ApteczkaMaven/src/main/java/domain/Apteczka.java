@@ -5,18 +5,18 @@ import java.util.List;
 import org.joda.time.DateTime;
 
 public class Apteczka {
+	public int id;
+	public String nazwa;
+	public DateTime data_utworzenia;
+	public List<Lek> leki;
+	
 	public Apteczka(int id, String nazwa, DateTime data_utworzenia, List<Lek> leki) {
 		this.id = id;
 		this.nazwa = nazwa;
 		this.data_utworzenia = data_utworzenia;
 		this.leki = leki;
 	}
-	
-	public int id;
-	public String nazwa;
-	public DateTime data_utworzenia;
-	public List<Lek> leki;
-	
+		
 	public int getId() {
 		return id;
 	}
