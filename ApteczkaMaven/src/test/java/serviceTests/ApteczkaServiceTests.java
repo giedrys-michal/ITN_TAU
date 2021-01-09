@@ -52,4 +52,11 @@ public class ApteczkaServiceTests {
 		as.addApteczka(ap_1);
 		assertNotNull(as.getApteczka(0).getData_utworzenia());
 	}
+	
+	@Test
+	public void isApteczka_1DataUtworzeniaInThePast() {
+		as.addApteczka(ap_1);
+		boolean isDataUtworzeniaInThePast = as.getApteczka(0).data_utworzenia.isBefore(DateTime.now());
+		assertTrue(isDataUtworzeniaInThePast);
+	}
 }
