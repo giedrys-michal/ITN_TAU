@@ -2,29 +2,27 @@ package serviceTests;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
-
-import java.math.BigDecimal;
-
 import static org.mockito.BDDMockito.*;
-
-import org.joda.money.Money;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import java.math.BigDecimal;
+import org.joda.money.Money;
 
 import domain.Lek;
 import service.LekiService;
 
 public class LekiServiceMockitoTests {
 	Lek lek_1Mock = mock(Lek.class);
-	LekiService ls = mock(LekiService.class);
+	LekiService lsMock = mock(LekiService.class);
 	
 	@Test
-	public void addLek() {
+	public void getIlosc() {
 		int ilosc;
 		
 		when(lek_1Mock.getIlosc()).thenReturn(20);
 		ilosc = lek_1Mock.getIlosc();
+		
 		assertEquals(20, ilosc);		
 	}
 	
@@ -36,6 +34,7 @@ public class LekiServiceMockitoTests {
 		
 		given(lek_1Mock.convertCenaToCurrency("USD", convRate)).willReturn(expectedAmount);
 		convertedAmount = lek_1Mock.convertCenaToCurrency("USD", convRate);
+		
 		assertTrue(expectedAmount.equals(convertedAmount));
 	}
 	
@@ -43,9 +42,9 @@ public class LekiServiceMockitoTests {
 	public void cenaSum() {
 		Money suma;
 		
-		when(ls.cenaSum()).thenReturn(Money.parse("PLN 60.00"));
-		suma = ls.cenaSum();
-		assertTrue("PLN 60.00".equals(suma.toString()));		
+		when(lsMock.cenaSum()).thenReturn(Money.parse("PLN 60.00"));
+		suma = lsMock.cenaSum();
 		
+		assertTrue("PLN 60.00".equals(suma.toString()));		
 	}
 }
