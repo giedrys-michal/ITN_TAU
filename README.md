@@ -31,3 +31,6 @@ Maven repository - https://mvnrepository.com/
 
 # Zjazd 4
 https://jbehave.org
+
+# Zjazd 5
+Zajęcia nieobowiązkowe
