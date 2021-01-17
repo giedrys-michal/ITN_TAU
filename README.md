@@ -31,6 +31,12 @@ Maven repository - https://mvnrepository.com/
 
 # Zjazd 4
 https://jbehave.org
+Mockito
 
 # Zjazd 5
 Zajęcia nieobowiązkowe
+
+# Zjazd 6
+testerzy.pl
+sonarcube
+python faker
