@@ -5,7 +5,7 @@ Pester jest framworkiem PowerShella służącym do testowania i mockowania.
 ## Środowisko
 
 Na potrzeby tej prezentacji przyjmujemy wykorzystanie PowerShell w wersji 5 bądź wyższej oraz framework w wersji 5.0.0  
-Informacje odnośnie wykorzystania frameworku dla wersji < 5 dostępne są na oficjalnej [stronie]https://pester.dev/ projektu.  
+Informacje odnośnie wykorzystania frameworku dla wersji < 5 dostępne są na oficjalnej [stronie](https://pester.dev/) projektu.  
 W momencie pisania tego README, aktualna wersja samego frameworku Pester to v5.0.0  
 
 
@@ -53,7 +53,7 @@ BeforeAll {
 }
 ```
 
-W tym bloku, możemy również umieścić bezpośrednio funkcję do przetestowania, zamiast umieszczać ściężkę odnoszącą do całego skryptu:
+W tym bloku możemy również umieścić bezpośrednio funkcję do przetestowania, zamiast ścieżki odnoszącej do całego skryptu:
 
 ```powershell
 BeforeAll {
@@ -67,7 +67,7 @@ BeforeAll {
 ### Struktura kodu testów
 
 Plik testów jest podzielony na bloki `Describe` `Context` `It` `BeforeAll` `BeforeEach` `AfterAll` `AfterEach`.  
-Na samym początku pliku znajduje się blok inicjalizacji `BeforeAll`, występujący przed wszystkimi testami, wazwiera on zwykle odniesienie do zaimportowanych funkcji (patrz wyżej).  
+Na samym początku pliku znajduje się blok inicjalizacji `BeforeAll`, występujący przed wszystkimi testami. Zawiera on zwykle odniesienie do zaimportowanych funkcji (patrz wyżej).  
 Następnie umieszcza się główny blok `Describe`, w nim będą znajdować się wszystkie kolejne bloki w całej strukturze.
 Nie powinno umieszczać się kodu poza tymi dwoma blokami bez dobrze uzasadnionego powodu.  
 
