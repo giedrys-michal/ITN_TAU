@@ -1,18 +1,12 @@
 {
-  "apteczki": [
-    {
-      "id": 1,
-      "leki" : [
-        {"nazwa": "lek1"},
-        {"nazwa": "lek2"}
-      ]
-    },
-    {
-      "id": 2,
-      "leki" : [
-        {"nazwa": "lek1"},
-        {"nazwa": "lek2"}
-      ]
-    }    
+  "leki": [
+    { "id": 0, "nazwa": "Rutinoscorbin", "typ": "Tabletka", "ilosc": 20 },
+    { "id": 1, "nazwa": "Polopiryna", "typ": "Tabletka", "ilosc": 30 },
+    { "id": 2, "nazwa": "Cholinex", "typ": "Tabletka", "ilosc": 15 },
+    { "id": 3, "nazwa": "Neo-Angin", "typ": "Tabletka", "ilosc": 10 },
+    { "id": 4, "nazwa": "Ketonal", "typ": "Tabletka", "ilosc": 20 },
+    { "id": 5, "nazwa": "Scorbolamid", "typ": "Tabletka", "ilosc": 20 },
+    { "id": 6, "nazwa": "Ibuprom", "typ": "Tabletka", "ilosc": 15 },
+    { "id": 7, "nazwa": "Apap", "typ": "Tabletka", "ilosc": 10 }
   ]
 }
