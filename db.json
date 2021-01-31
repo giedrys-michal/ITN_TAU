@@ -2,11 +2,17 @@
   "apteczki": [
     {
       "id": 1,
-      "leki" : ["lek1","lek2"]
+      "leki" : [
+        {"nazwa": "lek1"},
+        {"nazwa": "lek2"}
+      ]
     },
     {
       "id": 2,
-      "leki" : ["lek1","lek2"]
+      "leki" : [
+        {"nazwa": "lek1"},
+        {"nazwa": "lek2"}
+      ]
     }    
   ]
 }
