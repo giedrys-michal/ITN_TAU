@@ -1,11 +1,30 @@
 {
-    "example": [
+  "data": {
+    "apteczki": [
+      {
+        "id": 0,
+        "nazwa": "Apteczka_1",
+        "lokalizacja": "Gdańsk",
+        "leki" : [
+          { "id": 0, "nazwa": "Rutinoscorbin", "typ": "Tabletka", "ilosc": 20 },
+          { "id": 1, "nazwa": "Polopiryna", "typ": "Tabletka", "ilosc": 30 },
+          { "id": 2, "nazwa": "Cholinex", "typ": "Tabletka", "ilosc": 15 },
+          { "id": 3, "nazwa": "Neo-Angin", "typ": "Tabletka", "ilosc": 10 },
+          { "id": 4, "nazwa": "Ketonal", "typ": "Tabletka", "ilosc": 20 },
+          { "id": 5, "nazwa": "Scorbolamid", "typ": "Tabletka", "ilosc": 20 }
+        ]
+      },
       {
         "id": 1,
-        "title": "hello"
+        "nazwa": "Apteczka_2",
+        "lokalizacja": "Gdynia",
+        "leki" : [
+          { "id": 0, "nazwa": "Rutinoscorbin", "typ": "Tabletka", "ilosc": 20 },
+          { "id": 1, "nazwa": "Polopiryna", "typ": "Tabletka", "ilosc": 30 },
+          { "id": 2, "nazwa": "Ibuprom", "typ": "Tabletka", "ilosc": 15 },
+          { "id": 3, "nazwa": "Apap", "typ": "Tabletka", "ilosc": 10 }
+        ]
       }
-    ],
-    "test": {
-      "name": "test"
-    }
+    ]
   }
+}
